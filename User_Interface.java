@@ -64,7 +64,7 @@ public class User_Interface {
 
             Scanner keyboard = new Scanner(System.in);
             String filename = keyboard.nextLine();
-            System.out.println(filename);
+
             try {
 
                 File file = new File(filename);
@@ -87,7 +87,7 @@ public class User_Interface {
 
             Scanner keyboard = new Scanner(System.in);
             String filename = keyboard.nextLine();
-//            System.out.println(filename);
+
             try {
 
                 File file = new File(filename);
@@ -106,36 +106,15 @@ public class User_Interface {
         System.out.println("Enter the path to save the results to!");
         Scanner keyboard = new Scanner(System.in);
         String filename = keyboard.nextLine();
-            System.out.println(filename);
-            return filename;
+        return filename;
     }
     public String get_path_to_save_weights(){
         System.out.println("Enter the path to save the weights at.");
         Scanner keyboard = new Scanner(System.in);
         String filename = keyboard.nextLine();
-        System.out.println(filename);
+
         return filename;
     }
 }
-//    public String get_path()
-//    {
-//        Console console = System.console();
-//        if (console==null){
-//            System.out.print("console not available ");
-//        }else {
-//            String line = console.readLine("Enter name :");
-//            System.out.print("your name :"+line);
-//        }
-//
-//        }
-////        File tmpDir = new File(input);
-////        boolean exists = tmpDir.exists();
-////
-////        if (exists == false){
-////            System.out.println("INVALID Path");
-////            get_path();
-////        }
-//        return input;
-//    }
 
 

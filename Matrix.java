@@ -110,7 +110,6 @@ public class Matrix {
     }
 
     public static double[][] map_to_bipolar(String[][] a) {
-        Matrix.print(a);
         int columns = a.length;
         int rows = a[0].length;
         double[][] mapped = new double[rows][columns];
@@ -128,7 +127,6 @@ public class Matrix {
                     mapped[j][i] =0;
             }
         }
-        Matrix.print(mapped);
         return mapped;
     }
 
@@ -155,7 +153,6 @@ public class Matrix {
         double[][][] input_patterns = new double[input.length][][];
         for(int i = 0; i < input.length; i ++)
         {
-            System.out.println("here");
             input_patterns[i] = map_to_bipolar(input[i]);
         }
         return input_patterns;
