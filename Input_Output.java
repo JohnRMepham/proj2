@@ -9,9 +9,8 @@ public class Input_Output {
     public static int number_of_image_vectors;
     public static int rows;
     public static int columns;
-//    public String [] data;
 
-    public static String[][][] file_reader(String path)throws FileNotFoundException {
+    public static String[][][] file_reader(String path){
         if(dimensions(path)) {
             String[][][] pattern_data = new String[number_of_image_vectors][][];
             pattern_data = data_collector(path);
@@ -96,9 +95,6 @@ public class Input_Output {
             System.out.println("DATA FILE NOT FOUND");
             return false;
         }
-
         return true;
     }
-
-
 }
