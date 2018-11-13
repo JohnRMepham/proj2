@@ -1,7 +1,7 @@
-import java.io.File;
+
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-///Users/johnrogermepham/IdeaProjects/Neural_networks project 2/test
+
 public class main{
     public static void main(String[] args)throws FileNotFoundException {
         boolean done = false, save_results = false, save_model_wieghts= false, print_results= true;
@@ -59,6 +59,7 @@ public class main{
             }
         }
     }
+
     private static void save_weights(User_Interface ui, Pattern[] stored_patterns)throws FileNotFoundException{
         String path_to_save = ui.get_path_to_save_weights();
         Model new_model = new Model(stored_patterns);
@@ -72,6 +73,7 @@ public class main{
         }
         writer.close();
     }
+
     private static void run_test_patterns(Pattern[] stored_patterns, Pattern[] testing_patterns, boolean save_results,
                                           User_Interface ui)throws FileNotFoundException{
         String path_to_save;
@@ -118,5 +120,4 @@ public class main{
         }
         return patterns;
     }
-
 }

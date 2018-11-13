@@ -1,21 +1,18 @@
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-import java.util.*;
-import java.io.File;
-public class User_Interface {
 
-    boolean model_flag;
+import java.util.Scanner;
+import java.io.File;
+
+public class User_Interface {
 
     public User_Interface()
     {
-        this.model_flag = false;
-//        System.out.println(get_choice(5));
-//        System.out.println(get_path());
     }
+
     public void weclome(){
         System.out.println("Hi All! Welcome to my first Hopfield Net");
 
     }
+
     public int choices(){
         System.out.println("What would you like to do?");
         System.out.println("\t(1)load a training patterns.");
@@ -26,6 +23,7 @@ public class User_Interface {
         return get_choice(5);
 
     }
+
     public int get_extra_choice(){
         System.out.println("What would you like to do?");
         System.out.println("\t(1)Run Test Patterns and save results");
@@ -102,12 +100,14 @@ public class User_Interface {
         }
         return null;
     }
+
     public String get_path_to_save_results(){
         System.out.println("Enter the path to save the results to!");
         Scanner keyboard = new Scanner(System.in);
         String filename = keyboard.nextLine();
         return filename;
     }
+
     public String get_path_to_save_weights(){
         System.out.println("Enter the path to save the weights at.");
         Scanner keyboard = new Scanner(System.in);

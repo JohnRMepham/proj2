@@ -4,16 +4,14 @@ public class Pattern {
     private int rows;
     private int input_dimensions;
 
-    public Pattern(double [][] ar)
-    {
+    public Pattern(double [][] ar) {
         this.columns = ar[0].length;
         this.rows = ar.length;
         this.input_dimensions = rows*columns;
         this.input_array = flatten(ar);
     }
 
-    private double[] flatten(double[][] input)
-    {
+    private double[] flatten(double[][] input) {
         double[] flattened = new double[this.input_dimensions];
         for (int i = 0; i < rows; i++)
             for (int j = 0; j < columns; j++) {
@@ -23,20 +21,18 @@ public class Pattern {
     }
 
 
-    public boolean check_input_index(int index, double expected_value)
-    {
+    public boolean check_input_index(int index, double expected_value) {
         if (input_array[index] == expected_value)
             return true;
         else
             return false;
     }
 
-    public void update_input_array(int index, double new_value)
-    {
+    public void update_input_array(int index, double new_value) {
         input_array[index] = new_value;
     }
-    public void print_pattern()
-    {
+
+    public void print_pattern(){
         int i = 0;
         while (i < input_dimensions) {
             for (int j = 0; j < columns; j++) {
@@ -46,8 +42,8 @@ public class Pattern {
             System.out.println();
         }
     }
-    public void print()
-    {
+
+    public void print() {
         double [][] temp = new double[rows][columns];
         for (int i = 0; i < rows; i++){
             for (int j = 0; j < columns; j++) {
@@ -55,10 +51,9 @@ public class Pattern {
             }
         }
         Matrix.print(Matrix.map_to_zero_and_spaces(temp));
-
     }
-    public double[][] get_mapped_array ()
-    {
+
+    public double[][] get_mapped_array () {
         double [][] temp = new double[rows][columns];
         for (int i = 0; i < rows; i++){
             for (int j = 0; j < columns; j++) {
@@ -66,8 +61,8 @@ public class Pattern {
             }
         }
         return temp;
-//        Matrix.print(Matrix.map_to_zero_and_spaces(temp));
     }
+
     public int get_input_dimensions() {
         return input_dimensions;
     }
