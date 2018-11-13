@@ -43,7 +43,6 @@ public class Input_Output {
                         if (k > line.length-1)
                             data_line[k] = " ";
                         else{
-                            System.out.println(line[k]);
                             if(line[k].equals("O") || line[k].equals("0"))
                                  data_line[k] = "0";
                             else
@@ -66,9 +65,8 @@ public class Input_Output {
             File file = new File(path);
             Scanner sc = new Scanner(file);
             input_dimensions = Integer.parseInt(sc.nextLine().split(" ")[0]);
-            System.out.println(String.valueOf("Input dimensions: " + input_dimensions));
             number_of_image_vectors = Integer.parseInt(sc.nextLine().split(" ")[0]);
-            System.out.println("Number of image vectors: " + number_of_image_vectors);
+
             int row_counter = 0 ;
             while(sc.hasNextLine()) {
 
@@ -83,7 +81,7 @@ public class Input_Output {
                     rows = row_counter;
             }
             if ((rows * columns)!=input_dimensions) {
-                System.out.println("CHECK DATA FILE: INPUT DEMENSION MISSMATCH");
+                System.out.println("CHECK DATA FILE: INPUT DIMENSION MISMATCH");
                 return false;
             }
             try {
